@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title> Trends of Internet Usage </title>
+
+  <link rel="stylesheet" href="styles/normalize.css">
+  <link rel="stylesheet" href="styles/mychart.css">
+  <!-- add the Highcharts script elements here -->
+  <script src="https://code.highcharts.com/highcharts.js"></script>
+  <script src="https://code.highcharts.com/themes/sand-signika.js"></script>
+</head>
+
+<div id="page">
+<body>
+
+  <h1>Trends of Augmented Reality (AR) Advertising Spending</h1>
+  <h3> by Josh Firestone</h3>
+
+  <!-- add the div and the code BELOW this comment -->
+  <div id="container"></div>
+
+<p>Source: Socintel360, <a href="http://www.socintel360.com/retailers-lead-to-spend-us204-million-on-ar-based-campaigns-in-2014/69/">Gloabal Augmented Reality Spending, 2014-2017</a></p>
+
+  <div id="charttwo"></div>
+
+  <p>Source: Socintel360, <a href="http://www.socintel360.com/retailers-lead-to-spend-us204-million-on-ar-based-campaigns-in-2014/69/">Gloabal Augmented Reality Spending, 2014-2017</a> Note: Lower estimates of industy share used, therefore they do not add up to 100%</p>
+
+<h2>What does this mean?</h2>
+
+  <p>Despite the technology still being in the early stage of adoption, the past few years has proven to show strong growth for Augment Reality, also called AR. The innovative technology will have an impact on a wide range of business functions. With the ability to completely redefine how consumers and brands interact, there will be substantial and swift changes in marketing and advertising across industries.</p>
+
+  <p>One way to measure AR’s marketing impact is to look at the rapid growth of AR advertising spending across industries in recent years. Retail has seen the biggest portion of AR advertising spend due to the technology’s ability to engagement with consumers and build brand experiences in a whole new way. Retail is followed by the media and entertainment industry, which utilizes smartphones’ AR capabilities to deliver immersive content to consumers. Other industries, like finance and healthcare, still lag behind as the technology, and it’s uses, continue to develop. The future looks bright for this booming and exciting new technology.</p>
+
+  <p>Source: Socintel360, <a href="http://www.socintel360.com/retailers-lead-to-spend-us204-million-on-ar-based-campaigns-in-2014/69/">Gloabal Augmented Reality Spending, 2014-2017</a></p>
+
+<script>
+Highcharts.chart('container', {
+
+    title: {
+        text: 'Global augmented reality (AR) advertising spend in U.S. billions from 2014-2017'
+    },
+
+    subtitle: {
+        text: 'Source:www.socintel360.com'
+    },
+
+    yAxis: {
+        title: {
+            text: 'Spending in billion U.S. dollars'
+        }
+    },
+    legend: {
+        layout: 'vertical',
+        align: 'right',
+        verticalAlign: 'middle'
+    },
+
+    plotOptions: {
+        series: {
+            label: {
+                connectorAllowed: false
+            },
+            pointStart: 2014
+        }
+    },
+
+    series: [{
+   			showInLegend: false,
+        name: ' ',
+        data: [.6, 2.3, 6.6, 12.8,]
+    }],
+
+    responsive: {
+        rules: [{
+            condition: {
+                maxWidth: 500
+            },
+            chartOptions: {
+                legend: {
+                    layout: 'horizontal',
+                    align: 'center',
+                    verticalAlign: 'bottom'
+                }
+            }
+        }]
+    }
+
+});
+  </script>
+
+<script>
+
+// Create the chart
+// Create the chart
+Highcharts.chart('charttwo', {
+    chart: {
+        type: 'column'
+    },
+    title: {
+        text: 'AR ad spend breakdown by industry'
+    },
+    subtitle: {
+        text: 'Source: www.socintel360.com'
+    },
+    xAxis: {
+        type: 'category'
+    },
+    yAxis: {
+        title: {
+            text: 'Total percent market share'
+        }
+
+    },
+    legend: {
+        enabled: false
+    },
+    plotOptions: {
+        series: {
+            borderWidth: 0,
+            dataLabels: {
+                enabled: true,
+                format: '{point.y:.1f}%'
+            }
+        }
+    },
+
+    tooltip: {
+        headerFormat: '<span style="font-size:11px">{series.name}</span><br>',
+        pointFormat: '<span style="color:{point.color}">{point.name}</span>: <b>{point.y:.2f}%</b> of total<br/>'
+    },
+
+    series: [{
+        name: 'Brands',
+        colorByPoint: true,
+        data: [{
+            name: 'Retail',
+            y: 32,
+        }, {
+            name: 'Media & Entertainment',
+            y: 20,
+        }, {
+            name: 'Food & Beverage',
+            y: 12,
+        }, {
+            name: 'Health & Beauty',
+            y: 4,
+        }, {
+            name: 'Automotive',
+            y: 16,
+        }, {
+            name: 'Financial Services',
+            y: 2,
+        }, {
+            name: 'Leisure,Travel & Tourism',
+            y: 2,
+         }, {
+            name: 'Pharmaceutical & Healthcare',
+            y: 2,
+        }]
+    }],
+});
+</script>
+  <!-- don't write anything below these required tags -->
+</body>
+</div>
+</html>

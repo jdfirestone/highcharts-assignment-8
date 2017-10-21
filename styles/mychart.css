@@ -1,0 +1,40 @@
+* {
+  box-sizing: border-box;
+}
+
+body {
+  background: #fff;
+  color: #000;
+  font-family: "Avenir", sans-serif;
+}
+
+
+/*  #container div (below) wraps one chart  */
+
+#container, #charttwo {
+  height: 350px;
+}
+
+p { line-height: 1.25em;
+  padding: 0 3% 0 1%;
+}
+
+#page {
+  max-width: 900px;
+  margin: auto;
+  padding: 0 3% 0 3%;
+}
+
+
+/* links */
+
+a {
+  color: #4286f4;
+}
+
+a:hover {
+  color: #cd41f4;
+}
+
+
+/* put your media queries below */
